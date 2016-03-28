@@ -55,11 +55,11 @@
 * **BlobToHex** - convert blob entries to hex
 
 ### Column Declaration type for Table
-#### sql.TableDeclType(hDB, Table)
+###### sql.TableDeclType(hDB, Table)
 * **hDB** - database handle
 * **table** - Table name
 
 ### SQL Query data type
-#### sql.SQLType(hDB, SQL)
+###### sql.SQLType(hDB, SQL)
 * **hDB** - database handle
 * **SQL** - SQL statement
