@@ -8,14 +8,14 @@ sql := SQLite3(options:="", dll:="")
 * **dll** - the path and name of sqlite3 dll, default for Win32w is sqlite3_x86.dll and sqlite3_x64.dll for x64w. The dll can be loaded from Resources as well (e.g. when compiled) using for example **FileInstall,sqlite3_x86.dll,?**
 
 ### Open Database
-```
+``` AutoHotkey
 sql.open16[Database,DatabaseHandle]
 ```
 * **Database** - A path to a database file on disk or network, use ":memory:" to create a database from memory.
 * **DataBaseHandle** - the name of the variable in which to store the database handle
 
 ### Create Table from Object, File, String or ADO source
-```
+``` AutoHotkey
 sql.TableFromObj(hDB, source, table, head:="", delete:=true, primary:="")
 sql.TableFromFile(hDB, source, table, head:="", delimiter:="`t", skip:=0, trim:="", delete:=true, primary:="")
 sql.TableFromString(hDB, ByRef source, table, head:="", delimiter:="`t", skip:=0, trim:="", delete:=true, primary:="")
@@ -34,7 +34,7 @@ sql.TableFromADO(hDB, Connection, Query, table, head:="", delete:=1, primary:=""
 * **primary** - primary column(s).
 
 ### Query the database
-```
+``` AutoHotkey
 sql.SQLToObj(hDB, SQL, column:=false)
 sql.SQLToString(hDB, SQL, column:=true, separator:="`t", end:="`r`n")
 sql.SQLToFile(hDB, SQL, path, column:=true, separator:="`t", end:="`r`n")
@@ -52,14 +52,14 @@ sql.SQLToADO(hDB, SQL, Connection, Table, delete:=true, head:="")
 * **head** - column definition for ADO
 
 ### Execute SQL statement
-```
+``` AutoHotkey
 sql.Execute(hDB, SQL)
 ```
 * **hDB** - database handle
 * **SQL** - SQL statement to execute
 
 ### Show SQL Query result in ListView
-```
+``` AutoHotkey
 sql.List(hDB, SQL, BlobToHex:=false)
 ```
 * **hDB** - database handle
@@ -67,14 +67,14 @@ sql.List(hDB, SQL, BlobToHex:=false)
 * **BlobToHex** - convert blob entries to hex
 
 ### Column Declaration type for Table
-```
+``` AutoHotkey
 sql.TableDeclType(hDB, Table)
 ```
 * **hDB** - database handle
 * **table** - Table name
 
 ### SQL Query data type
-```
+``` AutoHotkey
 sql.SQLType(hDB, SQL)
 ```
 * **hDB** - database handle
