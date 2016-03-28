@@ -35,6 +35,7 @@
 ###### sql.SQLToADO(hDB, SQL, Connection, Table, delete:=true, head:="")
 * **hDB** - database handle
 * **SQL** - SQL statement. E.g. "Select * from MyTable"
+* **path** - file to save data to (content of file will be deleted before)
 * **column** - true to include column in output, false to output without header
 * **separator** - column separator
 * **end** - new line character(s)
