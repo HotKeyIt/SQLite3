@@ -41,7 +41,7 @@
 * **end** - new line character(s)
 * **Connection** - ADO connection string
 * **Table** - table name for ADO
-* *delete* - delete table (ADO)
+* **delete** - delete table (ADO)
 * **head** - column definition for ADO
 
 ### Execute SQL statement
