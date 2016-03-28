@@ -3,7 +3,7 @@
 ### Create an SQLite3 instance
 ###### sql := SQLite3(options:="", dll:="")
 * **options**  -  [Configuration Options](https://www.sqlite.org/c3ref/c_config_covering_index_scan.html). This can be an object with parameters for option or an object with objects if you have multiple options with parameters
-* **dll** - the path and name of sqlite3 dll, default for Win32w is sqlite3_x86.dll and sqlite3_x64.dll for x64w. The dll can be loaded from Resources as well (e.g. when compiled) using for example **FileInstall,sqlite3_x86.dll,* **
+* **dll** - the path and name of sqlite3 dll, default for Win32w is sqlite3_x86.dll and sqlite3_x64.dll for x64w. The dll can be loaded from Resources as well (e.g. when compiled) using for example **FileInstall,sqlite3_x86.dll,?**
 
 
 ### Open Database
