@@ -28,8 +28,8 @@ Class SQLite3 {
     this.shutdown(),MemoryFreeLibrary(this._library)
   }
   __New(Options:="", dll:=""){
-    static Functions1:={aggregate_context:"t==ti",auto_extension:"i==t",bind_blob:"i==titit",bind_double:"i==tid",bind_int:"i==tii",bind_int64:"i==ti6",bind_null:"i==ti",bind_text:"i==titit",bind_text16:"i==tisit",bind_value:"i==tit",bind_zeroblob:"i==tii",bind_parameter_count:"i==t",bind_parameter_index:"i==tt",bind_parameter_name:"t==ti",blob_bytes:"i==t",blob_open:"i==tttt6it*",blob_close:"i==t",blob_read:"i==ttii",blob_reopen:"i==t6",blob_write:"i==ttii",busy_handler:"i==ttt",busy_timeout:"i==ti",changes:"i==t",clear_bindings:"i==t",close:"i==t",close_v2:"i==t",collation_needed:"i==ttt",collation_needed16:"i==ttt",column_blob:"t==ti",column_bytes:"i==ti",column_bytes16:"i==ti",column_double:"d==ti",column_int:"i==ti",column_int64:"6==ti",column_text:"t==ti",column_text16:"s==ti",column_type:"i==ti",column_value:"t==ti",column_count:"i==t",column_decltype:"t==ti",column_decltype16:"s==ti",column_name:"t==ti",column_name16:"s==ti",commit_hook:"t==ttt",rollback_hook:"t==ttt",compileoption_used:"i==t",compileoption_get:"t==i",complete:"i==t",complete16:"i==t",context_db_handle:"t==t",create_collation:"i==ttitt",create_collation_v2:"i==ttittt",create_collation16:"i==ttitt",create_function:"i==ttiitttt",create_function16:"i==ttiitttt",create_function_v2:"i==ttiitttt",create_module:"i==tttt",create_module_v2:"i==ttttt",data_count:"i==t",db_config:"i==tittt",db_filename:"t==tt",db_mutex:"t==t",db_handle:"t==t",db_readonly:"i==tt",db_release_memory:"i==t"}
-    static functions2:={db_status:"i==tititi",declare_vtab:"i==tt",enable_load_extension:"i==ti",enable_shared_cache:"i==i",errcode:"i==t",extended_errcode:"i==t",errmsg:"t==t",errmsg16:"s==t",exec:"i==tattt*",extended_result_codes:"i==ti",file_control:"i==ttit",finalize:"i==t",malloc:"t==i",realloc:"t==ti",free:"t==t",get_table:"i==ttt*ttt*",free_table:"t==t",get_autocommit:"i==t",get_auxdata:"t==ti",set_auxdata:"t==tittt",shutdown:"i==",os_init:"i==",os_end:"i==",last_insert_rowid:"6==t",libversion:"t==",sourceid:"t==",libversion_number:"i==",limit:"i==tii",load_extension:"i==tttt*",log:"t==itttt",memory_used:"6==",memory_highwater:"6==i",mprintf:"t==ttttttttttt",vmprintf:"t==ttttttttttt",snprintf:"t==itttttttttt",vsnprintf:"t==itttttttttt",mutex_alloc:"t==i",mutex_free:"t==t",mutex_enter:"t==t",mutex_try:"i==t",mutex_leave:"t==t",next_stmt:"t==tt",open_v2:"i=tt*it",open:"i==tt*",overload_function:"i==tti",prepare:"i==ttit*t*",prepare_v2:"i==ttit*t*",prepare16:"i==tsit*t*",prepare16_v2:"i==twit*t*",trace:"t==ttt",profile:"t==ttt",progress_handler:"t==titt",randomness:"t==it",release_memory:"i==i",reset:"i==t",reset_auto_extension:"t==",result_blob:"t==ttit",result_double:"t==td",result_error:"t==tti",result_error16:"t==tti",result_error_toobig:"t==t",result_error_nomem:"t==t",result_error_code:"t==ti",result_int:"t==ti",result_int64:"t==t6",result_null:"t==t",result_text:"t==ttit",result_text16:"t==ttit",result_text16le:"t==ttit",result_text16be:"t==ttit",result_value:"t==tt",result_zeroblob:"t==ti",set_authorizer:"i==ttt",sleep:"i==i",soft_heap_limit64:"6==6",sql:"t==t",status:"i==itti",step:"i==t",stmt_busy:"i==t",stmt_readonly:"i==t",stmt_status:"i==tii",strnicmp:"i==tti",stricmp:"i==tti",threadsafe:"i==",total_changes:"i==t",backup_finish:"i==t",backup_init:"i==t",backup_pagecount:"i==t",backup_remaining:"i==t",backup_step:"i==t",open16:"i==wt*"}
+    static Functions1:={aggregate_context:"t==ti",auto_extension:"i==t",bind_blob:"i==titit",bind_double:"i==tid",bind_int:"i==tii",bind_int64:"i==ti6",bind_null:"i==ti",bind_text:"i==titit",bind_text16:"i==tiwit",bind_value:"i==tit",bind_zeroblob:"i==tii",bind_parameter_count:"i==t",bind_parameter_index:"i==tt",bind_parameter_name:"t==ti",blob_bytes:"i==t",blob_open:"i==tttt6it*",blob_close:"i==t",blob_read:"i==ttii",blob_reopen:"i==t6",blob_write:"i==ttii",busy_handler:"i==ttt",busy_timeout:"i==ti",changes:"i==t",clear_bindings:"i==t",close:"i==t",close_v2:"i==t",collation_needed:"i==ttt",collation_needed16:"i==ttt",column_blob:"t==ti",column_bytes:"i==ti",column_bytes16:"i==ti",column_double:"d==ti",column_int:"i==ti",column_int64:"6==ti",column_text:"t==ti",column_text16:"s==ti",column_type:"i==ti",column_value:"t==ti",column_count:"i==t",column_decltype:"t==ti",column_decltype16:"s==ti",column_name:"t==ti",column_name16:"s==ti",commit_hook:"t==ttt",rollback_hook:"t==ttt",compileoption_used:"i==t",compileoption_get:"t==i",complete:"i==t",complete16:"i==t",context_db_handle:"t==t",create_collation:"i==ttitt",create_collation_v2:"i==ttittt",create_collation16:"i==ttitt",create_function:"i==ttiitttt",create_function16:"i==ttiitttt",create_function_v2:"i==ttiitttt",create_module:"i==tttt",create_module_v2:"i==ttttt",data_count:"i==t",db_config:"i==tittt",db_filename:"t==tt",db_mutex:"t==t",db_handle:"t==t",db_readonly:"i==tt",db_release_memory:"i==t"}
+    static functions2:={db_status:"i==tititi",declare_vtab:"i==tt",enable_load_extension:"i==ti",enable_shared_cache:"i==i",errcode:"i==t",extended_errcode:"i==t",errmsg:"t==t",errstr:"a==i",errmsg16:"s==t",exec:"i==tattt*",extended_result_codes:"i==ti",file_control:"i==ttit",finalize:"i==t",malloc:"t==i",realloc:"t==ti",free:"t==t",get_table:"i==ttt*ttt*",free_table:"t==t",get_autocommit:"i==t",get_auxdata:"t==ti",set_auxdata:"t==tittt",shutdown:"i==",os_init:"i==",os_end:"i==",last_insert_rowid:"6==t",libversion:"t==",sourceid:"t==",libversion_number:"i==",limit:"i==tii",load_extension:"i==tttt*",log:"t==itttt",memory_used:"6==",memory_highwater:"6==i",mprintf:"t==ttttttttttt",vmprintf:"t==ttttttttttt",snprintf:"t==itttttttttt",vsnprintf:"t==itttttttttt",mutex_alloc:"t==i",mutex_free:"t==t",mutex_enter:"t==t",mutex_try:"i==t",mutex_leave:"t==t",next_stmt:"t==tt",open_v2:"i=tt*it",open:"i==tt*",overload_function:"i==tti",prepare:"i==ttit*t*",prepare_v2:"i==ttit*t*",prepare16:"i==tsit*t*",prepare16_v2:"i==twit*t*",trace:"t==ttt",profile:"t==ttt",progress_handler:"t==titt",randomness:"t==it",release_memory:"i==i",reset:"i==t",reset_auto_extension:"t==",result_blob:"t==ttit",result_double:"t==td",result_error:"t==tti",result_error16:"t==tti",result_error_toobig:"t==t",result_error_nomem:"t==t",result_error_code:"t==ti",result_int:"t==ti",result_int64:"t==t6",result_null:"t==t",result_text:"t==ttit",result_text16:"t==ttit",result_text16le:"t==ttit",result_text16be:"t==ttit",result_value:"t==tt",result_zeroblob:"t==ti",set_authorizer:"i==ttt",sleep:"i==i",soft_heap_limit64:"6==6",sql:"t==t",status:"i==itti",step:"i==t",stmt_busy:"i==t",stmt_readonly:"i==t",stmt_status:"i==tii",strnicmp:"i==tti",stricmp:"i==tti",threadsafe:"i==",total_changes:"i==t",backup_finish:"i==t",backup_init:"t==tata",backup_pagecount:"i==t",backup_remaining:"i==t",backup_step:"i==ti",open16:"i==wt*"}
     if !dll
       dll:="sqlite3_x" (A_PtrSize=8?"64":"86") ".dll"
     If !_library:=ResourceLoadLibrary(dll)
@@ -54,10 +54,16 @@ Class SQLite3 {
     for func,param in functions2
       this[func]:=DynaCall(MemoryGetProcAddress(_library,"sqlite3_" func),param)
   }
+	ListClose(ListGui:=0){
+		if ListGui=0
+			MsgBox(IsObject(A_EventInfo)),Listvars()
+		ListGui.Destroy()
+	}
   List(hDB, SQL, BlobToHex:=false){
-    static SQLiteGUI1,SQLiteGUI2,SQLiteGUI3,SQLiteGUI4,SQLiteGUI5,SQLiteGUI6,SQLiteGUI7,SQLiteGUI8,SQLiteGUI9,SQLiteGUI10,LV_Add:="LV_Add",LV_ModifyCol:="LV_ModifyCol",LV_Delete:="LV_Delete" ;required for AutoHotkeyMini.dll so it does not complain about not existing functions
+    static SQLiteGUI1,SQLiteGUI2,SQLiteGUI3,SQLiteGUI4,SQLiteGUI5,SQLiteGUI6,SQLiteGUI7,SQLiteGUI8,SQLiteGUI9,SQLiteGUI10 ;required for AutoHotkeyMini.dll so it does not complain about not existing functions
     if !(types:=this.SQLType(hDB,SQL)) || !SQL:=this.SQLToObj(hDB,SQL,true)
-      return (err:=this.errmsg16[hDB])="not an error"?0:MsgBox(err)
+      ; return (err:=this.errmsg16[hDB])="not an error"?0:MsgBox(err)
+      return false ;this.errmsg16[hDB]
     for k,v in SQL.RemoveAt(1)
       columns.=(columns?"|":"") v " (" types[A_Index] ")"
     Loop 10
@@ -65,32 +71,19 @@ Class SQLite3 {
         gui:=A_Index
     If !gui
       return MsgBox("Too many Guis, close at least one SQLite Query Winodow")
-    Gui,SQLiteGUI%gui%:+Resize +HWNDguihwnd
-    Gui,SQLiteGUI%gui%:Add,ListView,w640 h480 aw ah ReadOnly hwndhListView,%columns%
-    Gui,SQLiteGUI%gui%:Default
+		(SQLiteGUI:=GuiCreate("+Resize")).OnEvent("Close",SQLite3.ListClose.Bind(SQLiteGUI))
+		SQLiteGUI.OnEvent("Escape",SQLite3.ListClose)
+		LV:=SQLiteGUI.Add("ListView","w640 h480 aw ah ReadOnly",columns)
     for k,v in SQL
     {
       values:=[]
       for l,i in v
         values.Push(types[A_Index]="BLOB"?(BlobToHex&&v.GetCapacity(l)?BinToHex(v.GetAddress(l),v.GetCapacity(l)):"[Binary data]"):i)
-      %LV_Add%("",values*)
+      LV.Add("",values*)
     }
-    %LV_ModifyCol%()
-    Gui,SQLiteGUI%gui%:Show
-    return SQLiteGUI%gui%:=guihwnd
-    SQLITEGUI1GuiClose:
-    SQLITEGUI2GuiClose:
-    SQLITEGUI3GuiClose:
-    SQLITEGUI4GuiClose:
-    SQLITEGUI5GuiClose:
-    SQLITEGUI6GuiClose:
-    SQLITEGUI7GuiClose:
-    SQLITEGUI8GuiClose:
-    SQLITEGUI9GuiClose:
-    SQLITEGUI10GuiClose:
-      Gui,%A_Gui%:Destroy
-      SQLiteGUI%A_Gui%:=0
-    Return
+    LV.ModifyCol()
+    SQLiteGUI.Show()
+    return SQLiteGUI
   }
   Execute(hDB, SQL){
     pzTail:=&SQL,end:=pzTail + StrLen(SQL)*2
@@ -101,7 +94,7 @@ Class SQLite3 {
       if pStmt=0
         continue
       else if (err:=this.step[pStmt])!=101 && err!=100
-        return this.finalize[pStmt],"Error Step: " A_Index "`n" err ": " this.errmsg16[hDB]
+        return (this.finalize[pStmt],"Error Step: " A_Index "`n" err ": " this.errmsg16[hDB])
       if this.finalize[pStmt]
         return "Error Finalize: " A_Index "`n" this.errmsg16[hDB]
     }
@@ -112,28 +105,28 @@ Class SQLite3 {
     While pzTail!=final
     {
       if this.prepare16_v2[hDB,pzTail,-1,pStmt,pzTail]
-        return ErrorLevel:=this.errmsg16[hDB],""
+        return (ErrorLevel:=this.errmsg16[hDB],"")
       if pStmt=0
         continue
       else if 100=ret:=this.step[pStmt]
         break
       else if ret!=101
-        return this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],""
+        return (this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],"")
       if this.finalize[pStmt]
-        return ErrorLevel:=this.errmsg16[hDB],""
+        return (ErrorLevel:=this.errmsg16[hDB],"")
     }
     if ret=101 ; Done
       return
     Loop this.column_count[pStmt]
       res.Push(type[this.column_type[pStmt,A_Index - 1]])
-    return this.finalize[pStmt],res
+    return (this.finalize[pStmt],res)
   }
   SQLToObj(hDB, SQL, column:=false){
     pzTail:=&SQL,final:=pzTail + StrLen(SQL)*2,res:=[]
     While pzTail!=final
     {
       if this.prepare16_v2[hDB,pzTail,-1,pStmt,pzTail]
-        return ErrorLevel:=this.errmsg16[hDB],""
+        return (ErrorLevel:=this.errmsg16[hDB],"")
       if pStmt=0
         continue
       else if (100=ret:=this.step[pStmt])||ret=101
@@ -147,7 +140,7 @@ Class SQLite3 {
         if ret=101
         {
           if this.finalize[pStmt]
-            return ErrorLevel:=this.errmsg16[hDB],""
+            return (ErrorLevel:=this.errmsg16[hDB],"")
           continue
         }
         types:=[]
@@ -168,9 +161,9 @@ Class SQLite3 {
         }
       }
       else
-        return this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],""
+        return (this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],"")
       if this.finalize[pStmt]
-        return ErrorLevel:=this.errmsg16[hDB],""
+        return (ErrorLevel:=this.errmsg16[hDB],"")
     }
     return res.Length()?res:""
   }
@@ -179,7 +172,7 @@ Class SQLite3 {
     While pzTail!=final
     {
       if this.prepare16_v2[hDB,pzTail,-1,pStmt,pzTail]
-        return ErrorLevel:=this.errmsg16[hDB],""
+        return (ErrorLevel:=this.errmsg16[hDB],"")
       if pStmt=0
         continue
       else if (100=ret:=this.step[pStmt])||ret=101
@@ -194,7 +187,7 @@ Class SQLite3 {
         if ret=101
         {
           if this.finalize[pStmt]
-            return ErrorLevel:=this.errmsg16[hDB],""
+            return (ErrorLevel:=this.errmsg16[hDB],"")
           continue
         }
         types:=[]
@@ -213,21 +206,21 @@ Class SQLite3 {
         }
       }
       else
-        return this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],""
+        return (this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],"")
       if this.finalize[pStmt]
-        return ErrorLevel:=this.errmsg16[hDB],""
+        return (ErrorLevel:=this.errmsg16[hDB],false)
     }
     return res
   }
   SQLToFile(hDB, SQL, path, column:=true, sep:="`t", end:="`r`n"){
     While !hFile:=FileOpen(path,"rw-rwd","UTF-8")
-      MsgBox,262148,Error accessing File, Could not open %path%.`nMake Sure it is not write protected and not opened in other program,3
+      MsgBox "Could not open " path ".`nMake Sure it is not write protected and not opened in other program","Error accessing File","262148 t3"
     hFile.Length(0) ; delete file content
     pzTail:=&SQL,final:=pzTail + StrLen(SQL)*2
     While pzTail!=final
     {
       if this.prepare16_v2[hDB,pzTail,-1,pStmt,pzTail]
-        return ErrorLevel:=this.errmsg16[hDB],""
+        return (ErrorLevel:=this.errmsg16[hDB],false)
       if pStmt=0
         continue
       else if (100=ret:=this.step[pStmt])||ret=101
@@ -242,7 +235,7 @@ Class SQLite3 {
         if ret=101
         {
           if this.finalize[pStmt]
-            return ErrorLevel:=this.errmsg16[hDB],""
+            return (ErrorLevel:=this.errmsg16[hDB],false)
           continue
         }
         types:=[]
@@ -263,11 +256,11 @@ Class SQLite3 {
         }
       }
       else
-        return this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],""
+        return (this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],"")
       if this.finalize[pStmt]
-        return ErrorLevel:=this.errmsg16[hDB],""
+        return (ErrorLevel:=this.errmsg16[hDB],"")
     }
-    ret:=hFile.Pos?true:"",hFile.Close()
+    ret:=hFile.Pos?true:false,hFile.Close()
     return ret
   }
   SQLToADO(hDB, SQL, Connection, table, delete:=true, head:=""){
@@ -277,12 +270,12 @@ Class SQLite3 {
     ComObjError(true)
     conn.Open( Connection ) ; open the connection.
     If conn.State!=1
-      return ComObjError(ComErr),"" ; Error already displayed.
+      return (ComObjError(ComErr),"") ; Error already displayed.
     pzTail:=&SQL,final:=pzTail + StrLen(SQL)*2
     While pzTail!=final
     {
       if this.prepare16_v2[hDB,pzTail,-1,pStmt,pzTail]
-        return ComObjError(ComErr),conn.Close(),ErrorLevel:=this.errmsg16[hDB],""
+        return (ComObjError(ComErr),conn.Close(),ErrorLevel:=this.errmsg16[hDB],"")
       if pStmt=0
         continue
       else if (100=ret:=this.step[pStmt])||ret=101
@@ -293,37 +286,37 @@ Class SQLite3 {
           if head
           {
             if !delete
-              return this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Table must be deleted to apply header, use true for delete parameter!")
+              return (this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Table must be deleted to apply header, use true for delete parameter!"))
             If !conn.Execute(hDB,"Create TABLE " table " (" Trim(head,"()") ")")
-              return this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Syntax error:`nCreate TABLE " table " (" Trim(head,"()") ")")
+              return (this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Syntax error:`nCreate TABLE " table " (" Trim(head,"()") ")"))
           }
           ; use existing columns and types if table exists
           if tbl:=conn.execute(hDB,"SELECT * FROM " table)
           {
             if ColumnCount != (Fields:=tbl.Fields).Count
-              return this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Error: Result Query has " ColumnCount " columns but destination table has " oFields.Count " columns.")
+              return (this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Error: Result Query has " ColumnCount " columns but destination table has " oFields.Count " columns."))
             Loop ColumnCount
               types.Push(InStr(".4.5.6.14.131.","." (type:=Fields.Item(A_Index - 1).Type) ".") ? 2 : InStr(".2.3.10.11.16.17.18.19.20.21.139.201.","." type ".") ? 1 : InStr(".128.204.205.","." type ".") ? 4 : 3)
             if delete
               conn.Execute(hDB,"DELETE * FROM " table)  
           } else { ; table does not exist and head was not given, create it from query
             Loop ColumnCount
-              types.Push(this.column_type[pStmt,A_Index - 1]),head.=this.column_name16[pStmt,A_Index - 1] " " ((1=type:=types[A_Index]) ? "Integer" : type=2 ? "double" : type=3 ? "string" : "OLEObject") ","
-            If !conn.Execute(hDB,"Create TABLE " table " (" RTrim(head,",") ")")
-              return this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Syntax error:`nCreate TABLE " table " (" RTrim(head,",") ")")
+              types.Push(this.column_type[pStmt,A_Index - 1]),head.=this.column_name16[pStmt,A_Index - 1] " " ((1=type:=types[A_Index]) ? "Integer" : type=2 ? "double" : type=3 ? "string" : type=5 ? "string" : "OLEObject") ","
+						If !conn.Execute(hDB,"Create TABLE " table " (" RTrim(head,",") ")")
+              return (this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Syntax error:`nCreate TABLE " table " (" RTrim(head,",") ")"))
           }
         }
         if ret=101
         {
           if this.finalize[pStmt]
-            return conn.Close(),ComObjError(ComErr),MsgBox("Error Finalize: " this.errmsg16[hDB])
+            return (conn.Close(),ComObjError(ComErr),MsgBox("Error Finalize: " this.errmsg16[hDB]))
           continue
         }
         If !record := ComObjCreate( "ADODB.recordset" )
-          return this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Fatal Error: ADODB.recordset is not available.")
+          return (this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Fatal Error: ADODB.recordset is not available."))
         record.Open(table,conn,1,3,2) ;adOpenKeyset, adLockOptimistic, adCmdTable
         if record.State!=1
-          return this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Error: could not connect to table " table)
+          return (this.finalize[pStmt],conn.Close(),ComObjError(ComErr),MsgBox("Error: could not connect to table " table))
         ComObjError(true)
         While ret=100 
         {
@@ -345,11 +338,11 @@ Class SQLite3 {
         record.Update(),record.Close()
       }
       else if ret!=101
-        return ComObjError(ComErr),conn.Close(),this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],""
+        return (ComObjError(ComErr),conn.Close(),this.finalize[pStmt],ErrorLevel:=this.errmsg16[hDB],"")
       if this.finalize[pStmt]
-        return ComObjError(ComErr),conn.Close(),ErrorLevel:=this.errmsg16[hDB],""
+        return (ComObjError(ComErr),conn.Close(),ErrorLevel:=this.errmsg16[hDB],"")
     }
-    return conn.Close(),ComObjError(ComErr),true
+    return (conn.Close(),ComObjError(ComErr),true)
   }
   TableDeclType(hDB, table){
     colType:=[]
@@ -364,13 +357,13 @@ Class SQLite3 {
   }
   TableFromObj(hDB, source, table, head:="", delete:=true, primary:=""){
     If delete && this.Execute(hDB,"DROP TABLE IF EXISTS " table "`;CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )")
-      return err:=this.errmsg16[hDB],MsgBox("Error: " err "`n`n" "CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )"),0
+      return (err:=this.errmsg16[hDB],MsgBox("Error: " err "`n`n" "CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )"),0)
     colType:=this.TableDeclType(hDB,table)
     Loop ColIdx:=colType.Length()
       stmt.="?,"
     this.Exec[hDB,"BEGIN TRANSACTION"]
     if this.prepare16_v2[hDB,"INSERT INTO " table " VALUES (" RTrim(stmt,",") ")",-1,pStmt]
-      return err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],MsgBox("Error prepare " table "`n" err)
+      return (err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],MsgBox("Error prepare " table "`n" err))
     for k,line in source
       If line.Length()=ColIdx
       {
@@ -387,11 +380,11 @@ Class SQLite3 {
             ? this.bind_double[pStmt,A_Index,line[A_Index]+0]
           : this.bind_text16[pStmt,A_Index,line[A_Index] "",-1,-1] ;SQLITE_TRANSIENT
         If 101!=this.step[pStmt]
-          return err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],this.finalize[pStmt],MsgBox("Error step " table "`n" err)
+          return (err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],this.finalize[pStmt],MsgBox("Error step " table "`n" err))
         this.reset[pStmt]
       }
     if this.Exec[hDB,"END TRANSACTION"]
-      return this.finalize[pStmt],MsgBox("Error end transaction " table)
+      return (this.finalize[pStmt],MsgBox("Error end transaction " table))
     if this.finalize[pStmt]
       return MsgBox("Error finalize " table)
     return true
@@ -399,15 +392,15 @@ Class SQLite3 {
   TableFromFile(hDB, source, table, head:="", Delimiter:="`t", skip:=0, trim:="", delete:=true, primary:=""){
     If !FileExist(source)||!FileGetSize(source)
       return MsgBox("File " source " does not exist or is empty")
-    If delete && this.Execute(hDB,"DROP TABLE IF EXISTS " table "`;CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )")
-      return err:=this.errmsg16[hDB],MsgBox("Error: " err "`n`n" "CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )" ),0
+    If delete && errr:=this.Execute(hDB,"DROP TABLE IF EXISTS " table "`;CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )")
+      return (err:=this.errmsg16[hDB],MsgBox("Error: " err " - " errr "`n`n" "CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )" ),0)
     colType:=this.TableDeclType(hDB,table)
     Loop ColIdx:=colType.Length()
       stmt.="?,"
     this.Exec[hDB,"BEGIN TRANSACTION"]
     if this.prepare16_v2[hDB,"INSERT INTO " table " VALUES (" RTrim(stmt,",") ")",-1,pStmt]
-      return err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],MsgBox("Error prepare " table "`n" err "`nINSERT INTO " table " VALUES (" RTrim(stmt,",") ")")
-    LoopRead,%source%
+      return (err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],MsgBox("Error prepare " table "`n" err "`nINSERT INTO " table " VALUES (" RTrim(stmt,",") ")"))
+    Loop Read, source
       If (A_Index>skip && headLine!=A_LoopReadLine)
       {
         If (SubStr(A_LoopReadLine,1,1) SubStr(A_LoopReadLine,-1) = Delimiter Delimiter)
@@ -427,12 +420,12 @@ Class SQLite3 {
             ; if InStr(columnType,"char")||InStr(columnType,"clob")||InStr(columnType,"text")
             : this.bind_text16[pStmt,A_Index,Trim(line[A_Index],trim),-1,-1] ;SQLITE_TRANSIENT
           If 101!=this.step[pStmt]
-            return err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],this.finalize[pStmt],MsgBox("Error step " table "`n" err)
+            return (err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],this.finalize[pStmt],MsgBox("Error step " table "`n" err))
           this.reset[pStmt]
         }
       }
     if this.Exec[hDB,"END TRANSACTION"]
-      return this.finalize[pStmt],MsgBox("Error end transaction " table)
+      return (this.finalize[pStmt],MsgBox("Error end transaction " table))
     if this.finalize[pStmt]
       MsgBox("Error finalize " table)
     return true
@@ -441,14 +434,14 @@ Class SQLite3 {
     If source=""
       return MsgBox("Source is empty")
     If delete && this.Execute(hDB,"DROP TABLE IF EXISTS " table "`;CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )")
-      return err:=this.errmsg16[hDB],MsgBox("Error: " err "`n`n" "CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )" ),0
+      return (err:=this.errmsg16[hDB],MsgBox("Error: " err "`n`n" "CREATE TABLE " table " ( " head (!Primary?"":",PRIMARY KEY (" primary ")") " )" ),0)
     colType:=this.TableDeclType(hDB,table)
     Loop ColIdx:=colType.Length()
       stmt.="?,"
     this.Exec[hDB,"BEGIN TRANSACTION"]
     if this.prepare16_v2[hDB,"INSERT INTO " table " VALUES (" RTrim(stmt,",") ")",-1,pStmt]
-      return err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],MsgBox("Error prepare " table "`n" err "`nINSERT INTO " table " VALUES (" RTrim(stmt,",") ")")
-    LoopParse,%source%,`n,`r
+      return (err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],MsgBox("Error prepare " table "`n" err "`nINSERT INTO " table " VALUES (" RTrim(stmt,",") ")"))
+    Loop Parse, source,"`n","`r"
       If (A_Index>skip && headLine!=A_LoopField)
       {
         If (SubStr(A_LoopField,1,1) SubStr(A_LoopField,-1) = Delimiter Delimiter)
@@ -468,12 +461,12 @@ Class SQLite3 {
             ; if InStr(columnType,"char")||InStr(columnType,"clob")||InStr(columnType,"text")
             : this.bind_text16[pStmt,A_Index,Trim(line[A_Index],trim),-1,-1] ;SQLITE_TRANSIENT
           If 101!=this.step[pStmt]
-            return err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],this.finalize[pStmt],MsgBox("Error step " table "`n" err)
+            return (err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],this.finalize[pStmt],MsgBox("Error step " table "`n" err))
           this.reset[pStmt]
         }
       }
     if this.Exec[hDB,"END TRANSACTION"]
-      return this.finalize[pStmt],MsgBox("Error end transaction " table)
+      return (this.finalize[pStmt],MsgBox("Error end transaction " table))
     if this.finalize[pStmt]
       MsgBox("Error finalize " table)
     return true
@@ -487,7 +480,7 @@ Class SQLite3 {
     ,conn.CommandTimeout := 600 ; 10 minute timeout on the actual SQL statement.
     ,conn.Open( Connection ) ; open the connection.
     if conn.State!=1
-      return ComObjError(ComErr),MsgBox("Error: Could not open Connection `n" Connection)
+      return (ComObjError(ComErr),MsgBox("Error: Could not open Connection `n" Connection))
     ; Execute the query statement and process the recordset. > http://www.w3schools.com/ado/ado_ref_recordset.asp
     If ( record := conn.execute( Query ) )
     {
@@ -497,11 +490,11 @@ Class SQLite3 {
       Loop !head?ColIdx:0
         head.="'" oFields.Item(A_Index - 1).Name "' " (InStr(".4.5.6.14.131.","." (type:=oFields.Item(A_Index - 1).Type) ".") ? "real" : InStr(".2.3.10.11.16.17.18.19.20.21.139.201.","." type ".") ? "int" : InStr(".128.204.205.","." type ".") ? "blob" : "text") ","
       If delete && this.Execute(hDB,"DROP TABLE IF EXISTS " table "`;CREATE TABLE " table " ( " RTrim(head,",") (!Primary?"":",PRIMARY KEY (" primary ")") " )")
-        return record.Close(),conn.Close(),ComObjError(ComErr),err:=this.errmsg16[hDB],MsgBox("Error: " err "`n`n" "CREATE TABLE " table " ( " RTrim(head,",") (!Primary?"":",PRIMARY KEY (" primary ")") " )"),0
+        return (record.Close(),conn.Close(),ComObjError(ComErr),err:=this.errmsg16[hDB],MsgBox("Error: " err "`n`n" "CREATE TABLE " table " ( " RTrim(head,",") (!Primary?"":",PRIMARY KEY (" primary ")") " )"),0)
       colType:=this.TableDeclType(hDB,table)
       ,this.Exec[hDB,"BEGIN TRANSACTION"]
       if this.prepare16_v2[hDB,"INSERT INTO " table " VALUES (" RTrim(stmt,",") ")",-1,pStmt]
-        return record.Close(),conn.Close(),ComObjError(ComErr),err:=this.errmsg16[hDB],conn.Close(),this.Exec[hDB,"ROLLBACK TRANSACTION"],MsgBox("Error prepare " table "`n" err)
+        return (record.Close(),conn.Close(),ComObjError(ComErr),err:=this.errmsg16[hDB],conn.Close(),this.Exec[hDB,"ROLLBACK TRANSACTION"],MsgBox("Error prepare " table "`n" err))
       While IsObject( record )
         If !record.State ; Recordset.State is zero if the recordset is closed, so we skip it.
           record := record.NextRecordset()
@@ -523,21 +516,21 @@ Class SQLite3 {
               ; if InStr(columnType,"char")||InStr(columnType,"clob")||InStr(columnType,"text")
               : this.bind_text16[pStmt,A_Index,Fields.Item( A_Index - 1 ).Value "",-1,-1] ;SQLITE_TRANSIENT
             If 101!=this.step[pStmt]
-              return record.Close(),conn.Close(),ComObjError(ComErr),err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],this.finalize[pStmt],conn.Close(),MsgBox("Error step " table "`n" err)
+              return (record.Close(),conn.Close(),ComObjError(ComErr),err:=this.errmsg16[hDB],this.Exec[hDB,"ROLLBACK TRANSACTION"],this.finalize[pStmt],conn.Close(),MsgBox("Error step " table "`n" err))
             this.reset[pStmt],record.MoveNext() ; reset statement move the record pointer to the next row of values
           }
           record := record.NextRecordset() ; Get the next recordset, break the loop on error = end of records.
         }
     } else { ; Show errors.
-      Loop % (Errors := conn.Errors).Count ; http://www.w3schools.com/ado/ado_ref_error.asp
+      Loop (Errors := conn.Errors).Count ; http://www.w3schools.com/ado/ado_ref_error.asp
         Err .= SubStr( str := (Field := Errors.Item( A_Index - 1 )).Description,1 + InStr( str,"]",0,2 + InStr( str,"][",0,0 ) ) ) "`n   Number: " Field.Number ", NativeError: " Field.NativeError ", Source: " Field.Source ", SQLState: " Field.SQLState "`n`n"
-      return conn.Close(),ComObjError(ComErr),MsgBox(RTrim( Err,"`n"))
+      return (conn.Close(),ComObjError(ComErr),MsgBox(RTrim( Err,"`n")))
     }
 
     ; Close the connection and process the result.
     conn.Close(),ComObjError(ComErr)
     if this.Exec[hDB,"END TRANSACTION"]
-      return this.finalize[pStmt],MsgBox("Error end transaction " table)
+      return (this.finalize[pStmt],MsgBox("Error end transaction " table))
     if this.finalize[pStmt]
       return MsgBox("Error finalize " table)
     Return true
